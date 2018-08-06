@@ -1,4 +1,4 @@
-# starterkit
+# Vue js and Webpack Starterkit
 
 > A Vue.js project
 
