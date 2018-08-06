@@ -1,0 +1,32 @@
+$flickity-height: 60px;
+
+.flickity-rtl.vFlick {
+    .carousel-cell {
+        width: calc(20% - 0.5% * 2 - 80px / 5);
+        height: 100px;
+        margin: 0.5%;
+        @media(max-width: map-get($grid-breakpoints, "lg")) {
+            width: 32.33333%;
+        }
+        @media(max-width: map-get($grid-breakpoints, "md")) {
+            width: 99%;
+        }
+        img {
+            height: $flickity-height;
+        }
+    }
+    .flickity-prev-next-button {
+        background-color: rgba($white, 0.98);
+        height: 110px;
+        @include border-radius(0);
+
+        &.previous {
+            #{$left}: auto;
+            #{$right}: 0;
+        }
+        &.next {
+            #{$left}: 0;
+            #{$right}: auto;
+        }
+    }
+}

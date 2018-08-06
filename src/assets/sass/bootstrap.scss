@@ -1,0 +1,22 @@
+﻿// add bootstrap
+@import 'styles/variables';
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/mixins';
+@import 'themes/variables';
+@import 'themes/direction-rtl';
+@import 'styles/mixin';
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+// add bootstrap theme
+@import 'themes/rtl';
+@import 'themes/bootswatch';
+
+// add font icon
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/fa-solid';
+@import 'fontawesome/fa-brands';
+@import 'fontawesome/fa-regular';
+
+// other styles
+@import 'library/export';
+@import 'styles/export';

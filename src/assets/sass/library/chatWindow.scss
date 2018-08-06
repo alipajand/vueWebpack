@@ -1,0 +1,109 @@
+@import '../dependencies';
+
+.chatPage {
+    .window {
+        z-index: $zindex-fixed - 1 !important;
+        background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(240, 240, 252, 1) 100%) !important; /* ff3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(240, 240, 252, 1)), color-stop(70%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 1))) !important; /* safari4+,chrome */
+        background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(240, 240, 252, 1) 100%) !important; /* safari5.1+,chrome10+ */
+        background: -o-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(240, 240, 252, 1) 100%) !important; /* opera 11.10+ */
+        background: -ms-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(240, 240, 252, 1) 100%) !important; /* ie10+ */
+        background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 70%, rgba(240, 240, 252, 1) 100%) !important; /* w3c */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0f0fc', endColorstr='#ffffff', GradientType=0); /* ie6-9 */
+        @include box-shadow-mix($box-shadow-lg !important);
+
+        .titlebar {
+            font-size: 12px;
+            background: transparent !important;
+            font-family: $font-name-regular;
+            border-bottom: 1px solid $border-color;
+            @include border-radius(0);
+
+            button {
+                font-size: 20px;
+                @include transition($transition-base);
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: transparent !important;
+                }
+            }
+            .title {
+                font-size: 15px;
+                padding: 3px 5px;
+                color: $secondary;
+            }
+        }
+
+        @media (max-width: map-get($grid-breakpoints, "md")) {
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 100% !important;
+            position: fixed !important;
+            z-index: $zindex-modal + 1 !important;
+        }
+    }
+    .content {
+        margin-bottom: 55px;
+    }
+    .chat-content {
+        padding: $grid-gutter-width;
+
+        .chat-history {
+            width: auto;
+            font-size: 13px;
+            max-width: 80%;
+
+            &.chat-me {
+                color: $white;
+                background-color: #a4a4eb;
+                @include border-radius(10px 21px 10px 5px);
+            }
+            &.chat-you {
+                color: #4866b1;
+                background-color: #f0f0fc;
+                @include border-radius(21px 10px 5px 10px);
+            }
+        }
+        .chat-avatar {
+            width: 35px;
+
+            .card-image-container {
+                border: none;
+            }
+        }
+    }
+
+    .chat-form {
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        overflow: hidden;
+
+        small {
+            padding: 5px;
+            background-color: rgba($white, 0.8);
+            @include border-radius(14px);
+        }
+        input {
+            border: none;
+            background-color: #f6f6f6;
+            border-top: 1px solid transparent;
+            @include border-radius(0 !important);
+            @include placeholder-color(#c5c5c5);
+            @include transition($transition-base);
+
+            &:focus {
+                background-color: #fff;
+                border-top-color: $border-color;
+                @include box-shadow-mix(none);
+            }
+        }
+        .input-group-text {
+            background-color: #017eff;
+            border-top: 1px solid transparent;
+        }
+    }
+}
