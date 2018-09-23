@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/
+Disallow: /admin/
+Disallow: /error/
+
+Sitemap: https://www.starter.com/sitemap.xml

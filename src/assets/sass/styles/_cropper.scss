@@ -1,0 +1,33 @@
+﻿.croppa-wrapper {
+    overflow: hidden;
+    background-color: #f0f0f0;
+    padding: $grid-gutter-width / 2 0;
+
+    canvas {
+        z-index: 1;
+        cursor: move;
+        margin: auto;
+        display: table;
+        position: relative;
+
+    }
+    .icon {
+        margin-top: 20px;
+    }
+}
+
+.croppa-btn {
+    .btn {
+        min-width: 42px;
+        text-align: center;
+    }
+}
+
+.croppa-placeholder {
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    z-index: 0;
+}

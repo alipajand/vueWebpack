@@ -1,0 +1,48 @@
+﻿.tooltip {
+    &.show {
+        @include opacity(1);
+    }
+    &-inner {
+        font-size: 12px;
+        color: $secondary;
+        padding: 5px 14px;
+        max-width: 280px;
+        background-color: white;
+        border: 1px solid darken($primary, 1%);
+        @include border-radius($border-radius);
+        @include box-shadow-mix(0px 2px 4px 0px rgba(0, 0, 0, 0.09));
+    }
+    .arrow {
+        background-color: transparent;
+        &:before, &:after {
+            left: 0;
+            right: 0;
+            width: 9px;
+            height: 9px;
+            margin: auto;
+            border: none;
+            position: absolute;
+            background-color: $white;
+            border-right: 1px solid $primary;
+            border-bottom: 1px solid $primary;
+        }
+    }
+    &.bs-tooltip-top {
+        .arrow {
+            &:before {
+                bottom: 0;
+                margin-top: -5px;
+                @include transform(rotate(45deg));
+            }
+        }
+    }
+    &.bs-tooltip-bottom {
+        .arrow {
+            &:before {
+                top: 0;
+                margin-bottom: -5px;
+                @include transform(rotate(-135deg));
+            }
+        }
+    }
+}

@@ -1,12 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="fa">
+<head>
+    <base href="/">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>starterkit</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <meta name="robots" content="all">
+    <meta name="theme-color" content="#E84691">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-navbutton-color" content="#E84691">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="3Sootjobs">
+
+    <meta http-equiv="content-language" content="fa"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="canonical" href="https://3sootjobs.com"/>
+    <link rel="alternate" hreflang="fa" href="https://3sootjobs.com"/>
+    <link rel="manifest" href="<%= htmlWebpackPlugin.files.publicPath %>manifest.json">
+    <link rel="shortcut icon" type="image/x-icon" href="<%= htmlWebpackPlugin.files.publicPath %>favicon.ico"/>
+
+    <title>۳سوت جابز |‌ سامانه هوشمند استخدام و ارتباط مستقیم میان کارجو و کارفرما</title>
+
+    <meta name="description"
+          content="اولین و سریع ترین سامانه هوشمند استخدام و کاریابی با امکان گفت و گوی آنلاین و ارتباط مستقیم بین کارجو و کارفرما بر بستر موبایل و وب سایت در سراسر ایران"/>
+    <meta name="keywords"
+          content="آگهی استخدام,استخدام خصوصی,استخدام دولتی,کاریابی اینترنتی,استخدام تهران,استخدام اصفهان,استخدام کرج,استخدام وزارت نفت,استخدام آموزش و پرورش,استخدام همشهری,استخدام بانک,سایت کاریابی,ساخت رزومه,سایت شغل یابی,استخدام کارمند,کار پاره وقت,استخدام پاره وقت,استخدام کارآموز,کارآموزی تهران,فرصت شغلی,فرصتهای شغلی جدید,فرصتهای شغلی در تهران"/>
+
+    <% for (var chunk of webpack.chunks) {
+    for (var file of chunk.files) {
+    if (file.match(/\.(js|css)$/)) { %>
+    <link rel="<%= chunk.initial?'preload':'prefetch' %>"
+          href="<%= htmlWebpackPlugin.files.publicPath + file %>"
+          as="<%= file.match(/\.css$/)?'style':'script' %>">
+    <% }}} %>
+
+</head>
+<body>
+
+<div id="app">
+    <div class="loading-container-fix">
+        <div class="sk-cube-grid" style="margin-top: 30px;">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </div>
+    <noscript>
+        <div style="text-align: center; margin-top: 100px; direction: rtl">
+            متاسفانه مشکلی پیش آمده است!
+            <br>
+            این اپلیکیشن بدون جاوا اسکریپت نمی‌تواند کار کند. شما می‌توانید با مرورگر دیگری امتحان کنید...
+        </div>
+    </noscript>
+</div>
+
+<%= htmlWebpackPlugin.options.serviceWorkerLoader %>
+
+</body>
 </html>

@@ -1,0 +1,18 @@
+﻿.modal {
+    .modal-dialog {
+        margin: 0 auto;
+    }
+    .modal-content {
+        border: none;
+        @include border-radius($modalRadius);
+        @include box-shadow-mix($modal-content-box-shadow-sm-up)
+    }
+    .modal-footer {
+        padding: 0.5rem;
+
+        .btn {
+            padding: 5px 15px 7px;
+            @include border-radius(3px);
+        }
+    }
+}

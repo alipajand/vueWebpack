@@ -1,0 +1,48 @@
+.vue-slider-component {
+    .vue-slider-process {
+        background-color: $primary !important;
+    }
+    .vue-slider-tooltip {
+        color: $black !important;
+        font-size: 12px !important;
+        background-color: $white !important;
+        border: 1px solid $primary !important;
+        @include border-radius($border-radius);
+        @include box-shadow-mix(0px 2px 4px 0px rgba(0, 0, 0, 0.09));
+
+        &:before {
+            display: none;
+        }
+        &:after {
+            left: 0;
+            right: 0;
+            width: 9px;
+            content: '';
+            height: 9px;
+            margin: auto;
+            border: none;
+            position: absolute;
+            background-color: $white;
+            border-right: 1px solid $primary;
+            border-bottom: 1px solid $primary;
+        }
+    }
+    .vue-slider-tooltip-bottom {
+        .vue-slider-tooltip {
+            &:after {
+                top: 0;
+                margin-top: -4px;
+                @include transform(rotate(-135deg));
+            }
+        }
+    }
+    .vue-slider-tooltip-top {
+        .vue-slider-tooltip {
+            &:after {
+                bottom: 0;
+                margin-bottom: -4px;
+                @include transform(rotate(45deg));
+            }
+        }
+    }
+}

@@ -5,19 +5,12 @@ b {
     font-weight: 100;
 }
 
-@for $ii from 1 through 6 {
-    .h#{$ii},
-    h#{$ii} {
-        font-weight: 100;
-    }
-}
-
 .latin {
-    font-family: 'Roboto', $font-name-regular, 'Tahoma' !important;
+    font-family: $font-name-roboto, $font-name-regular, 'Tahoma' !important;
 }
 
 .latin-fa {
-    font-family: $font-name-regular-en, 'Tahoma' !important;
+    font-family: $font-name-regular-en, $font-name-regular, 'Tahoma' !important;
 }
 
 //###### Font Importing ######//
@@ -36,6 +29,7 @@ b {
     }
 }
 
-@include font-face-creator($font-name-regular, $path, 'iranyekanwebregular(fanum)', 'normal');
-@include font-face-creator($font-name-regular-en, $path, 'iranyekanwebregular', 'normal');
+@include font-face-creator($font-name-roboto, $path, 'roboto', 'normal');
 @include font-face-creator($font-name-bold, $path, 'iranyekanwebbold(fanum)', 'bold');
+@include font-face-creator($font-name-regular-en, $path, 'iranyekanwebregular', 'normal');
+@include font-face-creator($font-name-regular, $path, 'iranyekanwebregular(fanum)', 'normal');

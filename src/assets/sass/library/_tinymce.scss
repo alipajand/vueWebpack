@@ -1,0 +1,11 @@
+.mce-panel {
+    border-color: $border-color !important;
+}
+
+.mce-tinymce {
+    @include box-shadow-mix(none !important);
+}
+
+.mce-content-body  {
+    font-family: $font-family-sans-serif !important;
+}

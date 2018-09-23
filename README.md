@@ -1,30 +1,120 @@
 # Vue js and Webpack Starterkit
 
-> A Vue.js project
+## Installation
+```bash
+$ yarn [yarn install]
 
-## Build Setup
+# You can also use npm to install
+# Be careful! Some packages maybe have restricted access and have erors on installing 
+$ npm i [npm install]
+``` 
 
-``` bash
-# install dependencies
-npm install
+## Run and Build
+#### Start to Develop!
+```bash
+# For watching and start to run dev server
+$ npm start
+```
 
-# serve with hot reload at localhost:8080
-npm run dev
+#### Publish For Different Environment
+```bash
+# build for development
+$ npm run build
+```
+```bash
+# build for test env
+$ npm run build-test
+```
 
-# build for production with minification
-npm run build
+#### Test
+```bash
+# to run unit and e2e test
+$ npm run test
+```
 
-# build for production and view the bundle analyzer report
-npm run build --report
+to run Separate test works: (will be completed)
+```bash
+# unit tests
+$ npm run unit
 
-# run unit tests
-npm run unit
+# e2e test
+$ npm run e2e
+```
 
-# run e2e tests
-npm run e2e
+#### Report
+```bash
+# to run report on generated files
+$ npm run build-(dev/prod/test) --report
+```
 
-# run all tests
-npm test
+#### Folder Structure after Build
+```
+web/
+└── dist/
+    ├── assets/
+    │   ├── css/
+    │   │   ├── [name].[contenthash].css
+    │   │   └── [name].[contenthash].css.gz (gzip file)
+    │   │
+    │   ├── fonts/
+    │   │   └── [name].[ext] (eot/svg/ttf/woff/woff2)
+    │   │
+    │   ├── images/
+    │   │   └── [name].[ext] (png/jpg/svg)
+    │   │
+    │   ├── js
+    │   │   ├── [name].[chalkhash].js
+    │   │   └── [name].[chalkhash].js.gz (gzip file)
+    │   │
+    │   └── videos/
+    │       └── [name].[ext] (mp4)
+    │
+    ├── favicon.ico
+    ├── [google webmaster file].html
+    ├── humans.txt
+    ├── index.html
+    ├── manifest.html
+    ├── robots.txt
+    ├── service-worker.js
+    ├── sitemap.xml
+    └── sitemap.xml.gz (gzip file)
+```
+
+## Environments
++ Development:
+    - URL: https://beta.3sootjobs.com/
+    - Branch: [master](tree/master/)
+    - API Documentation: https://beta-api.3sootjobs.com/docs/
+
++ Production:
+    - URL: https://3sootjobs.com/
+    - Branch: [production](tree/production/)
+    - Releases: [Tags](tags/)
+
+## Project Info
+- [Repository](https://gitlab.com/ctrltech/3sootjobs/web)
+- [Issues](https://gitlab.com/ctrltech/3sootjobs/web/boards)
+- [Slack Channel](https://ctrltechteam.slack.com/messages/C5UPDUM4G)
+
+## `git` Help
+```bash
+# Change branch to master
+git checkout master
+
+# List of all branches
+git branch -a
+
+# Delete a git commit but keep the changes
+git reset HEAD^
+
+# Undo last commit
+git reset HEAD~1 --soft
+
+# Revert all uncommitted changes (longer to type, but works from any subdirectory)
+git reset --hard HEAD
+
+# This will remove all local untracked files, so only git tracked files remain
+git clean -fdx
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
