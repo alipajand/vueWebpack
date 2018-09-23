@@ -80,22 +80,6 @@ web/
     └── sitemap.xml.gz (gzip file)
 ```
 
-## Environments
-+ Development:
-    - URL: https://beta.3sootjobs.com/
-    - Branch: [master](tree/master/)
-    - API Documentation: https://beta-api.3sootjobs.com/docs/
-
-+ Production:
-    - URL: https://3sootjobs.com/
-    - Branch: [production](tree/production/)
-    - Releases: [Tags](tags/)
-
-## Project Info
-- [Repository](https://gitlab.com/ctrltech/3sootjobs/web)
-- [Issues](https://gitlab.com/ctrltech/3sootjobs/web/boards)
-- [Slack Channel](https://ctrltechteam.slack.com/messages/C5UPDUM4G)
-
 ## `git` Help
 ```bash
 # Change branch to master
